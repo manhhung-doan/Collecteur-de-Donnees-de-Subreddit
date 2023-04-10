@@ -7,7 +7,7 @@ Le script utilise la bibliothèque PRAW pour se connecter à l'API Reddit et ré
 
 Pour utiliser le script, il suffit de spécifier le nom du subreddit que vous voulez gratter et le nombre de messages à récupérer en utilisant les arguments de ligne de commande. Vous pouvez également spécifier le type de fichier dans lequel vous voulez exporter les données.
 
-Disclaimer: Ce script est uniquement à des fins académiques, convient pour les analystes de données, les chercheurs, les journalistes et toute personne qui s'intéresse à l'analyse des données de Reddit. Il est facile à utiliser et mais il y a de nombreuses limitations, veuillez considérer attentivement avant d'utiliser.
+**Disclaimer**: Ce script est uniquement à des fins académiques, convient pour les analystes de données, les chercheurs, les journalistes et toute personne qui s'intéresse à l'analyse des données de Reddit. Il est facile à utiliser et mais il y a de nombreuses limitations, veuillez considérer attentivement avant d'utiliser.
 
 ## Mode d'emploi
 Avec ce code, vous pouvez exécuter le script avec une commande comme celle-ci :

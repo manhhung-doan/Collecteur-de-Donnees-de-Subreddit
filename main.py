@@ -1,9 +1,9 @@
 import praw
-import sqlite3
-import pandas as pd
 import json
-import xml.etree.ElementTree as ET
+import sqlite3
 import argparse
+import pandas as pd
+import xml.etree.ElementTree as ET
 
 class SubredditScraper:
     def __init__(self, subreddit_name):
