@@ -3,6 +3,7 @@ import sqlite3
 import pandas as pd
 import json
 import xml.etree.ElementTree as ET
+import argparse
 
 class SubredditScraper:
     def __init__(self, subreddit_name):
@@ -99,4 +100,34 @@ class SubredditScraper:
         self.conn.close()
 
 if __name__ == "__main__":
-    scraper = SubredditScraper("learnpython") 
+    # Create a parser object
+    parser = argparse.ArgumentParser(description="Scrape a subreddit and export the data to Excel, XML, or JSON")
+    parser.add_argument("subreddit", help="The name of the subreddit to scrape")
+    parser.add_argument("--limit", type=int, default=10, help="The number of posts to scrape (default: 10)")
+    parser.add_argument("--export", choices=["excel", "xml", "json"], help="Export the data to Excel, XML, or JSON")
+    
+    # Parse the command-line arguments
+    args = parser.parse_args()
+    
+    # Create a SubredditScraper object
+    scraper = SubredditScraper(args.subreddit)
+    
+    # Fetch the posts from the subreddit
+    posts = scraper.fetch_posts(limit=args.limit)
+    
+    # Save the post data to the database
+    scraper.save_to_database(posts)
+    
+    # Export the data to the selected format
+    if args.export == "excel":
+        scraper.export_to_excel()
+        print("Data exported to Excel file")
+    elif args.export == "xml":
+        scraper.export_to_xml()
+        print("Data exported to XML file")
+    elif args.export == "json":
+        scraper.export_to_json()
+        print("Data exported to JSON file")
+    
+    # Close the database connection
+    scraper.close_database()
