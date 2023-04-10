@@ -11,6 +11,6 @@ Disclaimer: Ce script est uniquement à des fins académiques, convient pour les
 Par example:
 Avec ce code, vous pouvez exécuter le script avec une commande comme celle-ci :
 
-python subreddit_scraper.py python --limit 20 --export excel
+`python subreddit_scraper.py python --limit 20 --export excel`
 
 Cela va scraper les top 20 articles du sous-reddit python, enregistrera les données dans une base de données SQLite et exportera les données dans un fichier Excel. Vous pouvez remplacer excel par `xml` ou `json` pour exporter les données dans un format différent. Si vous ne spécifiez pas l'argument --export, le script enregistrera uniquement les données dans la base de données.
