@@ -1,5 +1,6 @@
 # Collecteur de Données de Subreddit
 
+## Introduction
 Ce script qui vous permet de récupérer les données d'un subreddit de votre choix et de les enregistrer dans une base de données SQLite. Vous pouvez également exporter les données dans un fichier Excel, XML ou JSON en utilisant des arguments de ligne de commande.
 
 Le script utilise la bibliothèque PRAW pour se connecter à l'API Reddit et récupérer les données de subreddit. Il utilise également la bibliothèque pandas pour exporter les données vers un fichier Excel, et les bibliothèques json et xml.etree.ElementTree pour exporter les données vers un fichier JSON ou XML, respectivement.
