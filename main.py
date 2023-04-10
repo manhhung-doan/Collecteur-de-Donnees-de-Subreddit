@@ -5,6 +5,7 @@ import argparse
 import pandas as pd
 import xml.etree.ElementTree as ET
 
+
 class SubredditScraper:
     def __init__(self, subreddit_name):
         # Initialize PRAW with your Reddit API credentials
